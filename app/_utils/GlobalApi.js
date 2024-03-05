@@ -12,10 +12,10 @@ const axiosClient = axios.create({
 })
 
 const getLatestProduct=()=> axiosClient.get('/products?populate=*');
-const getProductById=(id)=>axiosClient.get('/product/'+id+'?populate=*')
+const getProductById=(id)=>axiosClient.get('/products/'+id+'?populate=*')
 
 //Get Product By Category
-const getProductByCategory=()=>axiosClient.get('/product?filters[category][$eq]='+category+"&populate=*")
+const getProductByCategory=(category)=>axiosClient.get('/products?filters[category][$eq]='+category+"&populate=*")
 
 export default{
     getLatestProduct,

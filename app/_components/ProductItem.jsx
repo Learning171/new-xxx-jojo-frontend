@@ -10,7 +10,7 @@ function ProductItem({ product }) {
   const baseUrl = 'http://localhost:8000';
 
   return (
-    <Link href={'/product-details/'+product.id}>
+    <Link href={'/products/'+product.id}>
     <div className='hover:border p-1 rounded-lg border-primary'>
       {imageUrl && <img src={`${baseUrl}${imageUrl}`} 
       alt="Product Image" 

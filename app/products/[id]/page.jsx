@@ -16,12 +16,12 @@ function ProductDetail({params}) {
     const [productList, setProductList]=useState([]);
     
     useEffect(()=>{
-        console.log("Product Path", params?.productId)
+        console.log("Product Path", params?.id)
         getProductById_();
     },[])
 
     const getProductById_=()=>{
-        GlobalApi.getProductById(params?.productId).then(resp=>{
+        GlobalApi.getProductById(params?.id).then(resp=>{
             console.log(resp.data)
             setProductDetail(resp.data);
             getProductListByCategory();
